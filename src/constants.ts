@@ -1,0 +1,177 @@
+import { AppSettings, Member, MonthData } from './types';
+
+export const THAI_MONTHS = [
+  'มกราคม',
+  'กุมภาพันธ์',
+  'มีนาคม',
+  'เมษายน',
+  'พฤษภาคม',
+  'มิถุนายน',
+  'กรกฎาคม',
+  'สิงหาคม',
+  'กันยายน',
+  'ตุลาคม',
+  'พฤศจิกายน',
+  'ธันวาคม',
+];
+
+export const THAI_MONTHS_SHORT = [
+  'ม.ค.',
+  'ก.พ.',
+  'มี.ค.',
+  'เม.ย.',
+  'พ.ค.',
+  'มิ.ย.',
+  'ก.ค.',
+  'ส.ค.',
+  'ก.ย.',
+  'ต.ค.',
+  'พ.ย.',
+  'ธ.ค.',
+];
+
+export const DEFAULT_MEMBERS: Member[] = [
+  {
+    id: 'm1',
+    name: 'สมชาย ใจดี',
+    nickname: 'ชาย',
+    tag: 'สมาชิกกลุ่ม',
+    phone: '081-234-5678',
+    bankName: 'กสิกร',
+    accountNumber: '123-4-56789-0',
+    defaultAmount: 455,
+  },
+  {
+    id: 'm2',
+    name: 'อารียา รักษ์ดี',
+    nickname: 'แอน',
+    tag: 'สมาชิกกลุ่ม',
+    phone: '089-876-5432',
+    bankName: 'ไทยพาณิชย์',
+    accountNumber: '987-6-54321-0',
+    defaultAmount: 455,
+  },
+  {
+    id: 'm3',
+    name: 'ภานุมาศ วงศ์สว่าง',
+    nickname: 'ปอม',
+    tag: 'สมาชิกกลุ่ม',
+    phone: '086-555-1234',
+    bankName: 'กรุงเทพ',
+    accountNumber: '456-7-89012-3',
+    defaultAmount: 455,
+  },
+  {
+    id: 'm4',
+    name: 'นภาวรรณ มั่นคง',
+    nickname: 'นภา',
+    tag: 'สมาชิกกลุ่ม',
+    phone: '082-333-8899',
+    bankName: 'กรุงไทย',
+    accountNumber: '234-5-67890-1',
+    defaultAmount: 455,
+  },
+  {
+    id: 'm5',
+    name: 'กิตติศักดิ์ พัฒนา',
+    nickname: 'กิต',
+    tag: 'สมาชิกกลุ่ม',
+    phone: '083-444-9911',
+    bankName: 'ทหารไทยธนชาต',
+    accountNumber: '345-6-78901-2',
+    defaultAmount: 455,
+  },
+  {
+    id: 'm6',
+    name: 'วรัญญา ศรีสุข',
+    nickname: 'รัน',
+    tag: 'สมาชิกกลุ่ม',
+    phone: '084-555-2233',
+    bankName: 'กสิกร',
+    accountNumber: '567-8-90123-4',
+    defaultAmount: 455,
+  },
+  {
+    id: 'm7',
+    name: 'ธีรภัทร ชัยชนะ',
+    nickname: 'ภัทร',
+    tag: 'สมาชิกกลุ่ม',
+    phone: '085-666-7788',
+    bankName: 'ไทยพาณิชย์',
+    accountNumber: '678-9-01234-5',
+    defaultAmount: 455,
+  },
+  {
+    id: 'm8',
+    name: 'ปิยะดา สุขสำราญ',
+    nickname: 'ปุ๊ก',
+    tag: 'สมาชิกกลุ่ม',
+    phone: '087-777-8899',
+    bankName: 'กรุงศรี',
+    accountNumber: '789-0-12345-6',
+    defaultAmount: 455,
+  },
+];
+
+export const DEFAULT_SETTINGS: AppSettings = {
+  groupName: 'เงินกองกลาง / ค่าแชร์กลุ่มรายเดือน',
+  promptPayNumber: '081-234-5678',
+  promptPayName: 'นายกองกลาง ใจดี',
+  bankName: 'กสิกรไทย',
+  accountNumber: '123-4-56789-0',
+  accountName: 'นายกองกลาง ใจดี',
+  defaultFeePerPerson: 455,
+};
+
+export const INITIAL_MONTH_KEY = '2026-09'; // Sep 2569
+
+export const DEFAULT_INITIAL_MONTH_DATA: MonthData = {
+  monthKey: INITIAL_MONTH_KEY,
+  yearBE: 2569,
+  monthIndex: 8, // September
+  manualTotalFund: 10000,
+  isManualIncome: true,
+  manualIncome: 455,
+  payments: {
+    m1: {
+      paid: true,
+      paidAt: '2 ต.ค. 69, 13:21',
+      amount: 455,
+      method: 'พร้อมเพย์',
+      note: 'ยืนยันยอดเงินเรียบร้อย',
+    },
+    m2: { paid: false },
+    m3: { paid: false },
+    m4: { paid: false },
+    m5: { paid: false },
+    m6: { paid: false },
+    m7: { paid: false },
+    m8: { paid: false },
+  },
+  expenses: [
+    {
+      id: 'exp1',
+      title: 'ซื้ออาหาร',
+      category: 'ค่าใช้จ่ายทั่วไป',
+      amount: 200,
+      payee: 'ร้านค้า',
+      dateStr: '1 ต.ค. 69, 23:25 น.',
+      note: '',
+    },
+  ],
+};
+
+export const POPULAR_BANKS = [
+  'กสิกรไทย',
+  'ไทยพาณิชย์',
+  'กรุงเทพ',
+  'กรุงไทย',
+  'กรุงศรีอยุธยา',
+  'ทหารไทยธนชาต (ttb)',
+  'ออมสิน',
+  'เกียรตินาคินภัทร',
+  'ซีไอเอ็มบี ไทย',
+  'ยูโอบี',
+  'ทรูมันนี่ วอลเล็ท',
+  'พร้อมเพย์',
+];

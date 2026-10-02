@@ -1,0 +1,6 @@
+{
+  "name": "ระบบเช็กยอดเงินโอนรายเดือน",
+  "description": "ระบบเช็กยอดเงินโอนรายเดือน เงินกองกลาง ค่าแชร์กลุ่มรายเดือน พร้อมสรุปส่ง LINE และคำนวณเงินเข้า-ออก",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
